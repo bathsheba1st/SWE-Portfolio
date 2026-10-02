@@ -1,0 +1,9 @@
+{
+  "name": "swe-portfolio",
+  "private": true,
+  "description": "Portfolio site and three full stack projects (React, Node.js, SQLite).",
+  "scripts": {
+    "install:all": "npm install --prefix portfolio && npm install --prefix projects/newsdesk && npm install --prefix projects/briefing && npm install --prefix projects/pulse",
+    "test:all": "npm test --prefix projects/newsdesk && npm test --prefix projects/briefing && npm test --prefix projects/pulse"
+  }
+}

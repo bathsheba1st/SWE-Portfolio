@@ -1,0 +1,38 @@
+# Runs on every push and pull request: installs, tests and builds each app.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  projects:
+    name: ${{ matrix.project }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        project: [newsdesk, briefing, pulse]
+    defaults:
+      run:
+        working-directory: projects/${{ matrix.project }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npm test
+      - run: npm run build
+
+  portfolio:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: portfolio
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install
+      - run: npm run build
