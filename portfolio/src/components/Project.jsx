@@ -34,9 +34,31 @@ export default function Project({ project, number, repo }) {
         <ul className="stack" aria-label="Built with">
           {project.stack.map((item) => <li key={item}>{item}</li>)}
         </ul>
-        {repo
-          ? <a className="button" href={`${repo}/tree/main/${folder}`}>View the code</a>
-          : <code>{folder}/</code>}
+        <div className="project-links">
+          {project.demo && (
+            // The visible text is short; aria-label tells screen reader users which project.
+            <a
+              className="button button-primary" href={project.demo}
+              // target="_blank" opens a new tab. rel="noopener noreferrer" stops
+              // the new page from being able to control this one.
+              target="_blank" rel="noopener noreferrer"
+              aria-label={`Live demo of ${project.name} (opens in a new tab)`}
+            >
+              Live demo
+            </a>
+          )}
+          {repo
+            ? (
+              <a
+                className="button" href={`${repo}/tree/main/${folder}`}
+                target="_blank" rel="noopener noreferrer"
+                aria-label={`View the code for ${project.name} (opens in a new tab)`}
+              >
+                View the code
+              </a>
+            )
+            : <code>{folder}/</code>}
+        </div>
       </footer>
     </article>
   );

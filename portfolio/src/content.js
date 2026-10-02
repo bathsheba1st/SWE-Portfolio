@@ -69,6 +69,8 @@ export const skills = [
 export const projects = [
   {
     slug: 'newsdesk',
+    // The address of the running app. Leave empty ('') to hide the button.
+    demo: 'https://swe-portfolio-fpem.onrender.com/',
     name: 'Newsdesk',
     tagline: 'A newsroom CMS with sign-in, roles and a review workflow',
     summary:
@@ -111,6 +113,8 @@ export const projects = [
   },
   {
     slug: 'briefing',
+    // The address of the running app. Leave empty ('') to hide the button.
+    demo: 'https://swe-portfolio-1.onrender.com/',
     name: 'The Brief',
     tagline: 'A reader-facing news site with AI summaries that always work',
     summary:
@@ -160,6 +164,8 @@ export const projects = [
   },
   {
     slug: 'pulse',
+    // The address of the running app. Leave empty ('') to hide the button.
+    demo: 'https://swe-portfolio-2.onrender.com/',
     name: 'Pulse',
     tagline:
       'A monitoring dashboard for API traffic, errors and response times',
