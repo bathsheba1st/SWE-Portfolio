@@ -2,7 +2,7 @@ export const profile = {
   name: 'Bathsheba Omidiora',
   role: 'Full stack software engineer',
   location: 'Chicago, IL',
-  email: 'sheesprint@gmail.com',
+  email: 'shebadiora@gmail.com',
   github: 'https://github.com/bathsheba1st',
   linkedin: 'https://www.linkedin.com/in/bathsheba-omidiora-622a05178',
   repo: 'https://github.com/bathsheba1st/swe-portfolio',
